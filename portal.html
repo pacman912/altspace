@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Portals</title>
+    <meta name="Portals" content="Portals">
+    <!--Calling on aframes JS-->
+    <script src="https://aframe.io/releases/0.3.0/aframe.js%22%3E</script>
+    <!--Calling on the Altspace SDK js-->
+    <script src="https://cdn.rawgit.com/AltspaceVR/AltspaceSDK/v2.4.5/dist/altspace.min.js%22%3E</script>
+  </head>
+  <body>
+    <!-- Starting the scene, defining the alignment of the scent to the middle of the boundary box-->
+    <a-scene altspace='vertical-align: middle'>
+      <!--Asset Loading-->
+      <!--<a-assets> 
+      </a-assets>-->
+      <!--Load portals-->
+      <a-entity position='6.5 0.2 -2' rotation='0 -90 0' n-portal='targetSpace: new-user-info'></a-entity>
+      <a-entity n-billboard n-text="fontSize: 2; text:New User Info" position="6.1 0.7 -2"></a-entity>
+      <a-entity position='6.5 0.2 0' rotation='0 -90 0' n-portal='targetSpace: campfire-lobby'></a-entity>
+      <a-entity n-billboard n-text="fontSize: 2; text:Campfire" position="6.1 0.7 0"></a-entity>
+      <a-entity position='6.5 0.2 2' rotation='0 -90 0' n-portal='targetSpace: lunar-s-medieval-tavern'></a-entity>
+      <a-entity n-billboard n-text="fontSize: 2; text:My Tavern" position="6.1 0.7 2"></a-entity>
+      <!--Make another boundary box and load event portals-->
+      <a-entity position="6.5 0.1 0" rotation="0 -90 0" n-layout-browser="url:http://altspacevr.github.io/event-portals-app/;isEnclosure:true;"></a-entity>
+    <!--Ending the scene--> 
+    </a-scene>
+  </body>
+</html>
